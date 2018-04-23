@@ -1,0 +1,6 @@
+.vs/
+packages/
+Constants/bin/
+Constants/obj/
+Constants.Tests/bin/
+Constants.Tests/obj/
