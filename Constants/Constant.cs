@@ -54,14 +54,14 @@ namespace CloudyWing.Constants {
          public override bool Equals(object obj) {
             if (obj is Constant<T>) {
                 return Equals((Constant<T>)obj);
-            } else if (obj is ValueType) {
+            } else if (typeof(T) == typeof(string) && obj is string) {
+                return Value as string == obj as string;
+            } else if (obj is IConvertible) { // 主要處理當T和obj為不同數值型別時的轉換
                 try {
                     return Value.Equals(Convert.ChangeType(obj, typeof(T)));
                 } catch {
                     return false;
                 }
-            } else if (typeof(T) == typeof(string) && obj is string) {
-                return Value as string == obj as string;
             }
             return false;
         }
