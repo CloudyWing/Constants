@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 
 namespace CloudyWing.Constants {
-
     public abstract class Constant<T> : IConvertible where T : IConvertible {
-
         protected Constant(T value, string text) {
             Value = value;
             Text = text;
@@ -41,17 +39,11 @@ namespace CloudyWing.Constants {
             return !(a == b);
         }
 
-        public T Value {
-            get;
-            private set;
-        }
+        public T Value { get; }
 
-        public string Text {
-            get;
-            private set;
-        }
+        public string Text { get; }
 
-         public override bool Equals(object obj) {
+        public override bool Equals(object obj) {
             if (obj is Constant<T>) {
                 return Equals((Constant<T>)obj);
             } else if (typeof(T) == typeof(string) && obj is string) {
@@ -116,7 +108,7 @@ namespace CloudyWing.Constants {
         }
 
         int IConvertible.ToInt32(IFormatProvider provider) {
-            return Convert.ToInt32(Value, provider);;
+            return Convert.ToInt32(Value, provider);
         }
 
         uint IConvertible.ToUInt32(IFormatProvider provider) {
