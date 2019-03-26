@@ -4,10 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace CloudyWing.Constants {
-
     [Serializable]
     public sealed class WeekDay : Constant<int> {
-
         private static IList<WeekDay> items;
         public static readonly WeekDay Sunday;
         public static readonly WeekDay Monday;
@@ -71,7 +69,7 @@ namespace CloudyWing.Constants {
             return weekDay - 1;
         }
 
-        public string Name { get; private set; }
+        public string Name { get; }
 
         public string TextAbbreviation => Text.Substring(2);
 

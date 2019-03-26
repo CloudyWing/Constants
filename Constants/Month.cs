@@ -4,10 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace CloudyWing.Constants {
-
     [Serializable]
     public sealed class Month : Constant<int> {
-
         private static IList<Month> items;
         public static readonly Month January;
         public static readonly Month February;
@@ -68,7 +66,7 @@ namespace CloudyWing.Constants {
             return month - 1;
         }
 
-        public string Name { get; private set; }
+        public string Name { get; }
 
         public string TextAbbreviation => Text.Substring(0, Text.Length - 1);
 
