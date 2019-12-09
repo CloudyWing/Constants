@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace CloudyWing.Constants {
     public abstract class Constant<T> : IConvertible where T : IConvertible {
+        protected Constant(T value) : this(value, value.ToString()) { }
+
         protected Constant(T value, string text) {
             Value = value;
             Text = text;
