@@ -6,7 +6,7 @@ using System.Linq;
 namespace CloudyWing.Constants {
     [Serializable]
     public sealed class Month : Constant<int> {
-        private static IList<Month> items;
+        private static readonly IList<Month> items;
         public static readonly Month January;
         public static readonly Month February;
         public static readonly Month March;

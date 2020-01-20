@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 
@@ -267,8 +267,8 @@ namespace CloudyWing.Constants.Tests {
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(0, "¬P´Á¤é"), TestCase(1, "¬P´Á¤@"), TestCase(2, "¬P´Á¤G"), TestCase(3, "¬P´Á¤T")]
-        [TestCase(4, "¬P´Á¥|"), TestCase(5, "¬P´Á¤­"), TestCase(6, "¬P´Á¤»")]
+        [TestCase(0, "æ˜ŸæœŸæ—¥"), TestCase(1, "æ˜ŸæœŸä¸€"), TestCase(2, "æ˜ŸæœŸäºŒ"), TestCase(3, "æ˜ŸæœŸä¸‰")]
+        [TestCase(4, "æ˜ŸæœŸå››"), TestCase(5, "æ˜ŸæœŸäº”"), TestCase(6, "æ˜ŸæœŸå…­")]
         public void Text_Get_AreEqual(int integer, string expected) {
             WeekDay weekDay = GetWeekDay(integer);
 
@@ -277,8 +277,8 @@ namespace CloudyWing.Constants.Tests {
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(0, "¤é"), TestCase(1, "¤@"), TestCase(2, "¤G"), TestCase(3, "¤T")]
-        [TestCase(4, "¥|"), TestCase(5, "¤­"), TestCase(6, "¤»")]
+        [TestCase(0, "æ—¥"), TestCase(1, "ä¸€"), TestCase(2, "äºŒ"), TestCase(3, "ä¸‰")]
+        [TestCase(4, "å››"), TestCase(5, "äº”"), TestCase(6, "å…­")]
         public void TextAbbreviation_Get_AreEqual(int integer, string expected) {
             WeekDay weekDay = GetWeekDay(integer);
 
@@ -287,8 +287,8 @@ namespace CloudyWing.Constants.Tests {
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(0, "(¤é)"), TestCase(1, "(¤@)"), TestCase(2, "(¤G)"), TestCase(3, "(¤T)")]
-        [TestCase(4, "(¥|)"), TestCase(5, "(¤­)"), TestCase(6, "(¤»)")]
+        [TestCase(0, "(æ—¥)"), TestCase(1, "(ä¸€)"), TestCase(2, "(äºŒ)"), TestCase(3, "(ä¸‰)")]
+        [TestCase(4, "(å››)"), TestCase(5, "(äº”)"), TestCase(6, "(å…­)")]
         public void TextAbbreviationWithBracket_Get_AreEqual(int integer, string expected) {
             WeekDay weekDay = GetWeekDay(integer);
 

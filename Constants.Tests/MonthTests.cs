@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 
@@ -292,10 +292,10 @@ namespace CloudyWing.Constants.Tests {
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(1, "¤@¤ë"), TestCase(2, "¤G¤ë"), TestCase(3, "¤T¤ë")]
-        [TestCase(4, "¥|¤ë"), TestCase(5, "¤­¤ë"), TestCase(6, "¤»¤ë")]
-        [TestCase(7, "¤C¤ë"), TestCase(8, "¤K¤ë"), TestCase(9, "¤E¤ë")]
-        [TestCase(10, "¤Q¤ë"), TestCase(11, "¤Q¤@¤ë"), TestCase(12, "¤Q¤G¤ë")]
+        [TestCase(1, "ä¸€æœˆ"), TestCase(2, "äºŒæœˆ"), TestCase(3, "ä¸‰æœˆ")]
+        [TestCase(4, "å››æœˆ"), TestCase(5, "äº”æœˆ"), TestCase(6, "å…­æœˆ")]
+        [TestCase(7, "ä¸ƒæœˆ"), TestCase(8, "å…«æœˆ"), TestCase(9, "ä¹æœˆ")]
+        [TestCase(10, "åæœˆ"), TestCase(11, "åä¸€æœˆ"), TestCase(12, "åäºŒæœˆ")]
         public void Text_Get_AreEqual(int integer, string expected) {
             Month month = GetMonth(integer);
 
@@ -304,10 +304,10 @@ namespace CloudyWing.Constants.Tests {
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(1, "¤@"), TestCase(2, "¤G"), TestCase(3, "¤T")]
-        [TestCase(4, "¥|"), TestCase(5, "¤­"), TestCase(6, "¤»")]
-        [TestCase(7, "¤C"), TestCase(8, "¤K"), TestCase(9, "¤E")]
-        [TestCase(10, "¤Q"), TestCase(11, "¤Q¤@"), TestCase(12, "¤Q¤G")]
+        [TestCase(1, "ä¸€"), TestCase(2, "äºŒ"), TestCase(3, "ä¸‰")]
+        [TestCase(4, "å››"), TestCase(5, "äº”"), TestCase(6, "å…­")]
+        [TestCase(7, "ä¸ƒ"), TestCase(8, "å…«"), TestCase(9, "ä¹")]
+        [TestCase(10, "å"), TestCase(11, "åä¸€"), TestCase(12, "åäºŒ")]
         public void TextAbbreviation_Get_AreEqual(int integer, string expected) {
             Month month = GetMonth(integer);
 
