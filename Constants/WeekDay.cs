@@ -6,7 +6,7 @@ using System.Linq;
 namespace CloudyWing.Constants {
     [Serializable]
     public sealed class WeekDay : Constant<int> {
-        private static IList<WeekDay> items;
+        private readonly static IList<WeekDay> items;
         public static readonly WeekDay Sunday;
         public static readonly WeekDay Monday;
         public static readonly WeekDay Tuesday;
