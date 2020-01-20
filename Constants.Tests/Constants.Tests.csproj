@@ -8,6 +8,8 @@
     <AssemblyName>CloudyWing.Constants.Tests</AssemblyName>
 
     <RootNamespace>CloudyWing.Constants.Tests</RootNamespace>
+
+    <FileVersion>1.0.7324.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
