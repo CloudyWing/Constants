@@ -7,9 +7,9 @@
     <Authors>周尚緯</Authors>
     <Company />
     <Product>Constants</Product>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.7324.0</FileVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.7325.0</FileVersion>
     <Description>Provides basic classes used by object constants.</Description>
     <PackageProjectUrl>https://github.com/CloudyWing/Constants</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CloudyWing/Constants</RepositoryUrl>
