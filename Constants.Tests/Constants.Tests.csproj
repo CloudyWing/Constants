@@ -9,7 +9,9 @@
 
     <RootNamespace>CloudyWing.Constants.Tests</RootNamespace>
 
-    <FileVersion>1.0.7324.0</FileVersion>
+    <FileVersion>1.1.7325.0</FileVersion>
+
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
