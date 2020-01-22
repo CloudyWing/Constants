@@ -2,5 +2,7 @@
 packages/
 Constants/bin/
 Constants/obj/
+Constants.Examples/bin/
+Constants.Examples/obj/
 Constants.Tests/bin/
 Constants.Tests/obj/

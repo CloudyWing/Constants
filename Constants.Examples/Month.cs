@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace CloudyWing.Constants {
+namespace CloudyWing.Constants.Examples {
     [Serializable]
     public sealed class Month : Constant<int> {
         private static readonly IList<Month> items;

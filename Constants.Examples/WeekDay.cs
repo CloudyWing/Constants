@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace CloudyWing.Constants {
+namespace CloudyWing.Constants.Examples {
     [Serializable]
     public sealed class WeekDay : Constant<int> {
         private readonly static IList<WeekDay> items;

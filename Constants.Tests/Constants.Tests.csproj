@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Constants.Examples\Constants.Examples.csproj" />
     <ProjectReference Include="..\Constants\Constants.csproj" />
   </ItemGroup>
 

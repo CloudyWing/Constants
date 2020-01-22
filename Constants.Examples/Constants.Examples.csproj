@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>CloudyWing.Constants.Examples</AssemblyName>
+    <RootNamespace>CloudyWing.Constants.Examples</RootNamespace>
+    <Product>Constants.Examples</Product>
+    <Authors>周尚緯</Authors>
+    <FileVersion>1.0.7326.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj" />
+  </ItemGroup>
+
+</Project>
