@@ -3,6 +3,26 @@ using System.Collections.Generic;
 
 namespace CloudyWing.Constants {
     public abstract class Constant<T> : IConvertible where T : IConvertible {
+        private static readonly Dictionary<Type, TypeCode> typeMaps = new Dictionary<Type, TypeCode> {
+            [typeof(bool)] = TypeCode.Boolean,
+            [typeof(char)] = TypeCode.Char,
+            [typeof(sbyte)] = TypeCode.SByte,
+            [typeof(byte)] = TypeCode.Byte,
+            [typeof(short)] = TypeCode.Int16,
+            [typeof(ushort)] = TypeCode.UInt16,
+            [typeof(int)] = TypeCode.Int32,
+            [typeof(uint)] = TypeCode.UInt32,
+            [typeof(long)] = TypeCode.Int64,
+            [typeof(ulong)] = TypeCode.UInt64,
+            [typeof(float)] = TypeCode.Single,
+            [typeof(double)] = TypeCode.Double,
+            [typeof(decimal)] = TypeCode.Decimal,
+            [typeof(DateTime)] = TypeCode.DateTime,
+            [typeof(string)] = TypeCode.String,
+            [typeof(object)] = TypeCode.Object,
+            [typeof(DBNull)] = TypeCode.DBNull
+        };
+
         protected Constant(T value) : this(value, value.ToString()) { }
 
         protected Constant(T value, string text) {
@@ -82,7 +102,11 @@ namespace CloudyWing.Constants {
         }
 
         public TypeCode GetTypeCode() {
-            return TypeCode.Object;
+            Type type = typeof(T);
+            if (typeMaps.ContainsKey(type)) {
+                return typeMaps[type];
+            }
+            return TypeCode.Empty;
         }
 
         bool IConvertible.ToBoolean(IFormatProvider provider) {
