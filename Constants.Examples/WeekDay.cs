@@ -1,46 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace CloudyWing.Constants.Examples {
     [Serializable]
     public sealed class WeekDay : Constant<int> {
-        private readonly static IList<WeekDay> items;
-        public static readonly WeekDay Sunday;
-        public static readonly WeekDay Monday;
-        public static readonly WeekDay Tuesday;
-        public static readonly WeekDay Wednesday;
-        public static readonly WeekDay Thursday;
-        public static readonly WeekDay Friday;
-        public static readonly WeekDay Saturday;
-
-        static WeekDay() {
-            Sunday = new WeekDay(0, "星期日", nameof(Sunday));
-            Monday = new WeekDay(1, "星期一", nameof(Monday));
-            Tuesday = new WeekDay(2, "星期二", nameof(Tuesday));
-            Wednesday = new WeekDay(3, "星期三", nameof(Wednesday));
-            Thursday = new WeekDay(4, "星期四", nameof(Thursday));
-            Friday = new WeekDay(5, "星期五", nameof(Friday));
-            Saturday = new WeekDay(6, "星期六", nameof(Saturday));
-
-            items = new List<WeekDay>() {
-                Sunday,
-                Monday,
-                Tuesday,
-                Wednesday,
-                Thursday,
-                Friday,
-                Saturday
-            };
-        }
+        private static readonly Lazy<WeekDay> sunday = new Lazy<WeekDay>(() => new WeekDay(0, "星期日", nameof(Sunday)));
+        private static readonly Lazy<WeekDay> monday = new Lazy<WeekDay>(() => new WeekDay(1, "星期一", nameof(Monday)));
+        private static readonly Lazy<WeekDay> tuesday = new Lazy<WeekDay>(() => new WeekDay(2, "星期二", nameof(Tuesday)));
+        private static readonly Lazy<WeekDay> wednesday = new Lazy<WeekDay>(() => new WeekDay(3, "星期三", nameof(Wednesday)));
+        private static readonly Lazy<WeekDay> thursday = new Lazy<WeekDay>(() => new WeekDay(4, "星期四", nameof(Thursday)));
+        private static readonly Lazy<WeekDay> friday = new Lazy<WeekDay>(() => new WeekDay(5, "星期五", nameof(Friday)));
+        private static readonly Lazy<WeekDay> saturday = new Lazy<WeekDay>(() => new WeekDay(6, "星期六", nameof(Saturday)));
 
         private WeekDay(int value, string text, string name) : base(value, text) {
             Name = name;
         }
 
         public static explicit operator WeekDay(int value) {
-            return items.Where(x => x.Value == value).SingleOrDefault() ??
+            return GetItems().Where(x => x.Value == value).SingleOrDefault() ??
                 throw new InvalidCastException();
         }
 
@@ -69,6 +47,20 @@ namespace CloudyWing.Constants.Examples {
             return weekDay - 1;
         }
 
+        public static WeekDay Sunday => sunday.Value;
+
+        public static WeekDay Monday => monday.Value;
+
+        public static WeekDay Tuesday => tuesday.Value;
+
+        public static WeekDay Wednesday => wednesday.Value;
+
+        public static WeekDay Thursday => thursday.Value;
+
+        public static WeekDay Friday => friday.Value;
+
+        public static WeekDay Saturday => saturday.Value;
+
         public string Name { get; }
 
         public string TextAbbreviation => Text.Substring(2);
@@ -77,6 +69,19 @@ namespace CloudyWing.Constants.Examples {
 
         public string NameAbbreviation => Name.Substring(0, 3);
 
-        public static IReadOnlyList<WeekDay> GetItems() => new ReadOnlyCollection<WeekDay>(items);
+        public static bool TryParse(int value, out WeekDay result) {
+            result = GetItems().Where(x => x.Value == value).SingleOrDefault();
+            return result != null;
+        }
+
+        public static IEnumerable<WeekDay> GetItems() {
+            yield return Sunday;
+            yield return Monday;
+            yield return Tuesday;
+            yield return Wednesday;
+            yield return Thursday;
+            yield return Friday;
+            yield return Saturday;
+        }
     }
 }
