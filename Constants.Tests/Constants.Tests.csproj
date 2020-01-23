@@ -9,9 +9,9 @@
 
     <RootNamespace>CloudyWing.Constants.Tests</RootNamespace>
 
-    <FileVersion>1.1.7325.0</FileVersion>
+    <Authors>周尚緯</Authors>
 
-    <Version>1.1.0</Version>
+    <Product>Constants.Tests</Product>
   </PropertyGroup>
 
   <ItemGroup>
