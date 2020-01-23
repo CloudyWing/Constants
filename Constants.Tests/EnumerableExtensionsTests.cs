@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CloudyWing.Constants.Examples;
 using NUnit.Framework;
 
 namespace CloudyWing.Constants.Tests {
