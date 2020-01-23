@@ -1,14 +1,13 @@
 # Constants
 
-常數物件，將常數物件重複的行為整理成Constant\<T\>，並陸續將些較通用的常數物件放進來。
+常數物件，將常數物件重複的行為整理成Constant\<T\>。
 
 ## Supported Frameworks
+* .NET Standard 2.1
 * .NET Standard 2.0
 * .NET Framework 4.5
 
 ## Examples
-
-
 ```
 /// int 可替換任何implement IConvertible的type
 [Serializable]
@@ -62,6 +61,9 @@ public sealed class WeekDay : Constant<int> {
     public static IReadOnlyList<WeekDay> GetItems() => new ReadOnlyCollection<WeekDay>(items);
 }
 ```
+
+完整範例請參考
+[Constants.Examples](https://github.com/CloudyWing/Constants/tree/master/Constants.Examples)
 
 ## License
 This project is MIT [licensed](https://github.com/CloudyWing/Constants/blob/master/LICENSE.md).

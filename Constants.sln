@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constants.Examples", "Constants.Examples\Constants.Examples.csproj", "{2433F01D-53FB-4ECA-9C34-1A3AD067F753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constants.Examples", "Constants.Examples\Constants.Examples.csproj", "{2433F01D-53FB-4ECA-9C34-1A3AD067F753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,15 +65,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EADFB9D2-AB56-4343-AA53-3FCBA9FD084E}
-	EndGlobalSection
-	GlobalSection(AutomaticVersions) = postSolution
-		UpdateAssemblyVersion = True
-		UpdateAssemblyFileVersion = True
-		UpdateAssemblyInfoVersion = False
-		AssemblyVersionSettings = None.None.None.None
-		AssemblyFileVersionSettings = None.None.DeltaDayStamp.None
-		UpdatePackageVersion = False
-		AssemblyInfoVersionType = SettingsVersion
-		InheritWinAppVersionFrom = None
 	EndGlobalSection
 EndGlobal
