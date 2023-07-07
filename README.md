@@ -1,5 +1,11 @@
 # Constants
 
+**此 Repository 已搬移至 [Enumeration](https://github.com/CloudyWing/Enumeration)。**
+
+**Enumeration 為 Constants 的重新命名版本，此版本已不會有任何活動(不過本來就是沒人看的專案也沒差)。**
+
+---
+
 常數物件，將常數物件重複的行為整理成Constant\<T\>。
 
 ## Supported Frameworks
